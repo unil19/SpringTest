@@ -4,7 +4,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>test</artifactId>
-	<version>0.1.6</version>
+	<version>0.1.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>test</name>
@@ -31,7 +31,7 @@
 		<developerConnection>scm:git:${git.clone.address}</developerConnection>
 		<connection>${git.clone.address}</connection>
 		<url>${git.browse.address}</url>
-		<tag>v0.1.7</tag>
+		<tag>v0.1.0.RELEASE</tag>
 	</scm>
 	<dependencies>
 		<dependency>
