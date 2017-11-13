@@ -21,9 +21,19 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+		<maven-scm-plugin.version>1.9.5</maven-scm-plugin.version>
+		<git.clone.address>https://github.com/unil19/SpringTest.git</git.clone.address>
+		<git.browse.address>https://github.com/unil19/SpringTest</git.browse.address>
 		<java.version>1.8</java.version>
 	</properties>
-
+	<!--added scm config-->
+	<scm>
+		<developerConnection>scm:git:${git.clone.address}</developerConnection>
+		<connection>${git.clone.address}</connection>
+		<url>${git.browse.address}</url>
+		<tag>v0.1.0.RELEASE</tag>
+	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,6 +52,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!--added maven-release-plgin-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>${maven-scm-plugin.version}</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+			<!--added maven-scm-plgin-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${maven-release-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
